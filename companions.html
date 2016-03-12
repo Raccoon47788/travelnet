@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<h1>Companions</h1>
+
+<ul>
+  {% assign companions = (site.posts | sort: 'start_date' | where: 'layout', 'companion') %}
+  {% for companion in companions %}
+    <li>
+      <a href="{{ companion.url | prepend: site.baseurl }}">{{ companion.name }}</a>
+    </li>
+  {% endfor %}
+</ul>

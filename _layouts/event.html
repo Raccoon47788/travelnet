@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div>
+
+  <h2>{{ page.title }}</h2>
+
+  <div>
+    {{ content }}
+
+    <ul>
+    	{% for photo in page.photos %}
+    		{% assign path = (page.id | split: '/' | last | remove_first: 'event-') %}
+    		<li><img src="/images/events/{{ path }}/{{ photo }}" /></li>
+    	{% endfor %}
+    </ul>
+  </div>
+
+</div>

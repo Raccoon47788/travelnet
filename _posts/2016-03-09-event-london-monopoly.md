@@ -1,0 +1,11 @@
+---
+layout: event
+title:  "London Monopoly"
+start_date: "2016-03-10"
+end_date: "2016-03-10"
+location: "London"
+price: 100
+photos: ["london-1.jpg", "london-2.jpg"]
+---
+
+Some text here about the event.

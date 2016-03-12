@@ -18,4 +18,27 @@
 
   </body>
 
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js" integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+
+  (function ($) {
+    
+    $(document).on('ready', function () {
+      updatePaypalForm();
+      $('[name="event_name"]').on('change', updatePaypalForm);
+    });
+
+    var updatePaypalForm = function() {
+      var $event = $('[name="event_name"]');
+      var name = $event.val();
+
+      var price = $('[name="price_' + name.replace(/-/g, '_') + '"]').val();
+
+      $('[name="item_name"]').val(name);
+      $('[name="amount"]').val(price);
+    };
+
+  })(jQuery);
+
+  </script>
 </html>

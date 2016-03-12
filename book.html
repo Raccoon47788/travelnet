@@ -2,4 +2,25 @@
 layout: default
 ---
 
-<h1>Book</h1>
+{% assign events = (site.posts | sort: 'start_date' | where: 'layout', 'event') %}
+
+<h1>Book Form</h1>
+
+Bulid your package and make payment and receive conformation after payment.
+
+<form name="_xclick" action="https://www.paypal.com/uk/cgi-bin/webscr" method="post">
+	<select name="event_name">
+		{% for event in events %}
+			<option value="{{ event.uid }}">{{ event.title }}</option>
+		{% endfor %}
+	</select>
+	{% for event in events %}
+		<input type="hidden" name="price_{{ event.uid | replace: '-', '_' }}" value="{{ event.price }}" />
+	{% endfor %}
+	<input type="hidden" name="cmd" value="_xclick">
+	<input type="hidden" name="business" value="raccoon47788@gmail.com">
+	<input type="hidden" name="currency_code" value="GBP">
+	<input type="hidden" name="item_name" value="">
+	<input type="hidden" name="amount" value="">
+	<input type="submit" value="Pay" />
+</form>

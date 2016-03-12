@@ -1,6 +1,7 @@
 ---
 layout: event
 title:  "London Monopoly"
+uid: "london-monopoly"
 start_date: "2016-03-10"
 end_date: "2016-03-10"
 location: "London"

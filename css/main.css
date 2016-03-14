@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Passion+One);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
+
+/* Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* TravelNet */
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-size: 1rem;
+	text-align: center;
+	background-color: #E9E682;
+}
+
+h1 {
+	font-size: 2rem;
+	text-align: center;
+	color: #FE2E2E;
+	font-family: "Lobster", cursive;
+	text-decoration: underline;
+}
+
+h2 {
+	font-size: 25px;
+	color: #FE2E2E;
+	text-decoration: underline;
+	font-family: "Kaushan", cursive;
+}
+
+p, ul, a {
+	text-align: center;
+	color: #0080FF;
+	font-family: "Kaushan", cursive;
+}
+
+a {
+	color: #0080FF;
+	text-decoration: none;
+}
+
+.hide {
+	display: none;
+}
+
+#navigation {
+	padding: 10px;
+	text-align: center;
+	font-family: 'Passion One', cursive;
+	background-color: #58D3F7;
+}
+
+#navigation li {
+	display: inline-block;
+}
+
+#navigation a {
+	position: relative;
+	display: block;
+	padding: 10px;
+	color: #000;
+	text-decoration: none;
+}
+
+#navigation a:hover {
+	background-color: #fff;
+	border-radius: 10px;
+}

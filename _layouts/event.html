@@ -3,18 +3,18 @@ layout: default
 ---
 
 <div>
-
+<br>
   <h2>{{ page.title }}</h2>
-
-  <div>
-    {{ content }}
-
-    <ul>
+<br>
+  <ul class="bxslider">
     	{% for photo in page.photos %}
-    		{% assign path = (page.id | split: '/' | last | remove_first: 'event-') %}
-    		<li><img src="/images/events/{{ path }}/{{ photo }}" /></li>
-    	{% endfor %}
-    </ul>
-  </div>
+  		{% assign path = (page.id | split: '/' | last | remove_first: 'event-') %}
+  		<li><img src="/images/events/{{ path }}/{{ photo }}" /></li>
+  	{% endfor %}
+  </ul>
+
+  {{ content }}
+ <br>
+  <a href="/book.html?event={{ page.uid }}">Book Now</a>
 
 </div>

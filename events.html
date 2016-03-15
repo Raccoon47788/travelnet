@@ -3,6 +3,8 @@ layout: default
 ---
 
 	<h1>Events.</h1>
+    <h2>About Events</h2>
+      <p>Here Are Our List Of Available Events.</p><br>
 <ul>
   {% assign events = (site.posts | sort: 'start_date' | where: 'layout', 'event') %}
   {% for event in events %}

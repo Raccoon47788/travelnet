@@ -35,8 +35,11 @@ layout: default
       {% for i in (1..max_travellers_per_room) %}
         <option value="{{ i }}">{{ i }}</option>
       {% endfor %}
-    </select>
-        
+    </select><br>
+    
+    1st Traveller's Name<input type="text" name="first_persons_name"><br>
+    2nd Traveller's Name<input type="text" name="second_person_name">
+
     <input type="hidden" name="extra_person_price" value="{{ page.extra_person_price }}" />
     <input type="hidden" name="original_price" value="{{ page.price }}" />
     <input type="hidden" name="amount" value="{{ page.price }}" />
@@ -44,7 +47,7 @@ layout: default
     <input type="hidden" name="business" value="raccoon47788@gmail.com">
     <input type="hidden" name="currency_code" value="GBP">
     <input type="hidden" name="item_name" value="">
-    <input type="hidden" name="amount" value="">
+    <input type="hidden" name="amount" value=""><br>
     <input type="submit" value="Pay" />
   </form>
 

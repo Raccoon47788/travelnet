@@ -56,6 +56,10 @@ table {
 
 /* TravelNet */
 
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
 html {
 	font-size: 16px;
 }
@@ -95,12 +99,18 @@ p, ul {
 	text-align: center;
 	color: #0080FF;
 	font-family: "Kaushan", cursive;
+	margin-bottom: 1rem;
 }
 
 a {
 	text-align: center;
 	color: #0080FF;
 	text-decoration: none;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
 }
 
 fieldset {
@@ -114,7 +124,14 @@ fieldset {
 	display: none;
 }
 
+.page-content {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
 #navigation {
+	font-size: 1.5rem;
 	padding: 10px;
 	text-align: center;
 	font-family: 'Passion One', cursive;
@@ -147,4 +164,22 @@ fieldset {
 	width: 50px;
 	height: 50px;
 	border-radius: 50px;
+}
+
+.grid li {
+	float: left;
+	width: 32%;
+	margin: 0 2% 2% 0;
+}
+
+.grid li:nth-child(3n+3) {
+	margin-right: 0;
+}
+
+.grid a {
+	display: block;
+}
+
+.grid img {
+	border: 2px solid #222;
 }

@@ -22,7 +22,7 @@
 
       function updatePrice() {
         var price = parseInt($('[name="original_price"]').val(), 10);
-        var travellers = parseInt($(this).val(), 10);
+        var travellers = parseInt($('[name="travellers"]').val(), 10);
         var extra_person_price = 0;
 
         if (travellers > 1) {

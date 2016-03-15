@@ -8,7 +8,7 @@ location: "London"
 price: 100
 extra_person_price: 50
 photos: ["London1.jpg", "London2.jpg", "London3.jpg"]
-intro: "The London Monopoly Experince"
+intro: "The London Monopoly. Arrive: 1st June Depart: 3rd June"
 ---
 
 Some text here about the event.

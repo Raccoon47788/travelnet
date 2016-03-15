@@ -6,7 +6,9 @@ start_date: "2016-03-01"
 end_date: "2016-03-12"
 location: "Paris"
 price: 150
-photos: [ "Arch.jpg", "Bedroom.jpg", "Glass.jpg", "NotreDame.jpg",]
+extra_person_price: 100
+photos: [ "Paris1.jpg", "Paris2.jpg", "Paris3.jpg", "Paris4.jpg"]
+intro: "Paris Day Trip"
 ---
 
 Some text here about the event.

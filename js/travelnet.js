@@ -1,11 +1,39 @@
 (function ($) {
     
     $(document).on('ready', function () {
-      updatePaypalForm(true);
-      updateBookingForm();
+      $('select.room_type').on('change', updateTravellerOpts);
 
-      $('[name="event_name"]').on('change', updatePaypalForm);
-      $('[name="quantity"]').on('change', updateBookingForm);
+      $('select.travellers, select.room_type').on('change', updatePrice);
+
+      $('select.room_type').trigger('change');
+
+      function updateTravellerOpts () {
+        var $travellers = $('[name="travellers"]');
+        var traveller_count = parseInt($travellers, 10);
+        var room_type = $(this).val();
+
+        $travellers.find('option').attr('disabled', null);
+
+        if (room_type === 'single') {
+          $travellers.find('option[value="1"]').attr('selected', 'selected');
+          $travellers.find('option:not([value="1"])').attr('disabled', 'disabled');
+        }
+      }
+
+      function updatePrice() {
+        var price = parseInt($('[name="original_price"]').val(), 10);
+        var travellers = parseInt($(this).val(), 10);
+        var extra_person_price = 0;
+
+        if (travellers > 1) {
+          extra_person_price = parseInt($('[name="extra_person_price"]').val(), 10) * (travellers - 1);
+        }
+
+        price += extra_person_price;
+
+        $('[name="amount"]').val(price);
+        $('.price').html('Price &pound;' + price);
+      }
 
       $('.bxslider').bxSlider({
         autoStart: false,
@@ -13,57 +41,5 @@
         slideWidth: 600
       });
     });
-
-    function updatePaypalForm (init) {
-      var $event = $('[name="event_name"]');
-      var preselect = getParameterByName('event');
-
-      if (!$event.length) {
-        return;
-      }
-
-      if (init && preselect) {
-        $event.val(preselect);
-      }
-
-      var name = $event.val();
-      var price = $('[name="price_' + name.replace(/-/g, '_') + '"]').val();
-
-      $('[name="item_name"]').val(name);
-      $('[name="amount"]').val(price);
-    }
-
-    function updateBookingForm() {
-      if (!$('[name="quantity"]').length) {
-        return;
-      }
-
-      var quantity = parseInt($('[name="quantity"]').val(), 10);
-
-      $('.room_type').addClass('hide');
-
-      for (var i = 0; i < quantity; i++) {
-        $('.room_type:eq(' + i + ')').removeClass('hide');
-      }
-    }
-
-    function getParameterByName (name) {
-      var url = window.location.href.toLowerCase();
-
-      name = name.replace(/[\[\]]/g, '\\$&').toLowerCase();
-
-      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
-      var results = regex.exec(url);
-
-      if (!results) {
-        return null;
-      }
-
-      if (!results[2]) {
-        return '';
-      }
-
-      return decodeURIComponent(results[2].replace(/\+/g, ' '));
-    }
 
   })(jQuery);

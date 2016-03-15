@@ -2,19 +2,50 @@
 layout: default
 ---
 
+{% assign room_types = 'Single|Twin|Double' | split: '|' %}
+{% assign max_travellers_per_room = 2 %}
+
 <div>
-<br>
+
   <h2>{{ page.title }}</h2>
-<br>
+
   <ul class="bxslider">
-    	{% for photo in page.photos %}
-  		{% assign path = (page.id | split: '/' | last | remove_first: 'event-') %}
-  		<li><img src="/images/events/{{ path }}/{{ photo }}" /></li>
-  	{% endfor %}
+    {% for photo in page.photos %}
+      {% assign path = (page.id | split: '/' | last | remove_first: 'event-') %}
+      <li><img src="/images/events/{{ path }}/{{ photo }}" /></li>
+    {% endfor %}
   </ul>
 
   {{ content }}
- <br>
-  <a href="/book.html?event={{ page.uid }}">Book Now</a>
+
+  <div class="price">
+    Price: &pound;{{ page.price }}
+  </div>
+
+  <form name="_xclick" action="https://www.paypal.com/uk/cgi-bin/webscr" method="post">
+    <label for="room_type">Type {{ i }}</label>
+    <select name="room_type" class="room_type">
+      {% for type in room_types %}
+        <option value="{{ type | downcase }}">{{ type }}</option>
+      {% endfor %}
+    </select>
+
+    <label for="travellers">Travellers</label>
+    <select name="travellers" class="travellers">
+      {% for i in (1..max_travellers_per_room) %}
+        <option value="{{ i }}">{{ i }}</option>
+      {% endfor %}
+    </select>
+        
+    <input type="hidden" name="extra_person_price" value="{{ page.extra_person_price }}" />
+    <input type="hidden" name="original_price" value="{{ page.price }}" />
+    <input type="hidden" name="amount" value="{{ page.price }}" />
+    <input type="hidden" name="cmd" value="_xclick">
+    <input type="hidden" name="business" value="raccoon47788@gmail.com">
+    <input type="hidden" name="currency_code" value="GBP">
+    <input type="hidden" name="item_name" value="">
+    <input type="hidden" name="amount" value="">
+    <input type="submit" value="Pay" />
+  </form>
 
 </div>

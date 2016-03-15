@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Passion+One);
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 @import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
+@import url(https://fonts.googleapis.com/css?family=Playball);
 
 /* Reset */
 
@@ -59,6 +60,13 @@ html {
 	font-size: 16px;
 }
 
+header {
+	font-size: 45px;
+	font-family: "Playball", cursive;
+	color: #0B17F8;
+	text-decoration: underline;
+}
+
 body {
 	font-size: 1rem;
 	text-align: center;
@@ -91,6 +99,13 @@ a {
 	text-decoration: none;
 }
 
+fieldset {
+	border: 2px solid #222;
+	padding: 10px;
+	margin: 0 auto 1rem;
+	max-width: 300px;
+}
+
 .hide {
 	display: none;
 }
@@ -117,4 +132,8 @@ a {
 #navigation a:hover {
 	background-color: #fff;
 	border-radius: 10px;
+}
+
+.bxslider img {
+	width: 100%;
 }

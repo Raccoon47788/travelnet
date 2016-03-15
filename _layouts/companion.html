@@ -3,9 +3,8 @@ layout: default
 ---
 
 <div>
-<br>
   <h2>{{ page.name }}</h2>
-<br>
+
 	<ul class="bxslider">
     	{% for photo in page.photos %}
   		<li><img src="/images/companions/{{ path }}/{{ photo }}" /></li>
@@ -18,9 +17,7 @@ layout: default
     	<li>{{ page.location }}</li>
       <li>&pound;{{ page.rate }}</li>
     </ul>
-      <br>
     {{ content }}
-      <br>
   </div>
 
 </div>

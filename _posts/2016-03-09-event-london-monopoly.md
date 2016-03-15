@@ -6,7 +6,9 @@ start_date: "2016-03-10"
 end_date: "2016-03-10"
 location: "London"
 price: 100
-photos: ["london-1.jpg", "london-2.jpg", "Hyde-Park.jpg", "LondonBanks.jpg", "LondonView.jpg",]
+extra_person_price: 50
+photos: ["London1.jpg", "London2.jpg", "London3.jpg"]
+intro: "The London Monopoly Experince"
 ---
 
 Some text here about the event.

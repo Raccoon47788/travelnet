@@ -67,7 +67,7 @@ html {
 header {
 	font-size: 45px;
 	font-family: "Playball", cursive;
-	color: #0B17F8;
+	color: #063E53;
 	text-decoration: underline;
 	padding: 10px;
 }
@@ -75,13 +75,13 @@ header {
 body {
 	font-size: 1rem;
 	text-align: center;
-	background-color: #E9E682;
+	background-color: #D1C5B7;
 }
 
 h1 {
 	font-size: 2rem;
 	text-align: center;
-	color: #FE2E2E;
+	color: #063E53;
 	font-family: "Lobster", cursive;
 	text-decoration: underline;
 	padding: 10px;
@@ -89,7 +89,7 @@ h1 {
 
 h2 {
 	font-size: 25px;
-	color: #0B17F8;
+	color: #063E53;
 	text-decoration: underline;
 	font-family: "Kaushan", cursive;
 	padding: 10px;
@@ -97,7 +97,7 @@ h2 {
 
 p, ul {
 	text-align: center;
-	color: #0080FF;
+	color: #735D41;
 	font-family: "Kaushan", cursive;
 	margin-bottom: 1rem;
 }
@@ -108,7 +108,7 @@ p {
 
 a {
 	text-align: center;
-	color: #FE2E2E;
+	color: #0193B7;
 	text-decoration: none;
 }
 
@@ -138,8 +138,8 @@ fieldset {
 	font-size: 1.5rem;
 	padding: 10px;
 	text-align: center;
-	font-family: 'Passion One', cursive;
-	background-color: #58D3F7;
+	font-family: 'Lobster', cursive;
+	background-color: #856941;
 }
 
 #navigation li {
@@ -150,13 +150,13 @@ fieldset {
 	position: relative;
 	display: block;
 	padding: 10px;
-	color: #000;
+	color: #fff;
 	text-decoration: none;
 	padding: 10px;
 }
 
 #navigation a:hover {
-	background-color: #fff;
+	background-color: #D1C5B7;
 	border-radius: 10px;
 }
 
